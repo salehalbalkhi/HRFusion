@@ -1,0 +1,67 @@
+# .gitignore
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules
+node_modules/
+
+# Ignore logs
+*.log
+
+# Ignore the build folder
+/dist
+
+# Ignore IDE specific files
+.idea/
+*.iml
+.vscode/
+
+# Ignore package-lock.json to avoid conflicts
+package-lock.json
+
+# Ignore Python specific files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Java / Maven / Gradle related files
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
+.idea/
+.gradle/
+build/
+
+# Ignore Ruby specific files
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Ignore archive files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+obj/
+bin/
