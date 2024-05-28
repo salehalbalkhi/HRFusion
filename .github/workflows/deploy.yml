@@ -37,9 +37,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.VPS_KEY }}
 
-      - name: Deploy to VPS
+      - name: Test SSH connection
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no root@195.35.3.169 echo "SSH connection successful"
+
+      - name: Deploy to VPS
+        if: success()
+        run: |
+          ssh -o StrictHostKeyChecking=no root@195.35.3.169 << 'EOF'
             cd ~/apps/urfusionapp
             docker-compose down
             docker-compose pull
